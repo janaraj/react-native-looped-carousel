@@ -34,14 +34,8 @@ export default class Carousel extends Component {
     arrows: React.PropTypes.bool,
     arrowsContainerStyle: Text.propTypes.style,
     arrowstyle: Text.propTypes.style,
-    leftArrowText: React.PropTypes.oneOfType([
-      React.PropTypes.string,
-      React.PropTypes.element,
-    ]),
-    rightArrowText: React.PropTypes.oneOfType([
-      React.PropTypes.string,
-      React.PropTypes.element,
-    ]),
+    leftArrowText: React.PropTypes.string,
+    rightArrowText: React.PropTypes.string,
     chosenBulletStyle: Text.propTypes.style,
     onAnimateNextPage: React.PropTypes.func,
   };
@@ -275,7 +269,7 @@ export default class Carousel extends Component {
       pages.push(children[0]);
       pages.push(children[1]);
     } else if (children.length === 1) {
-      pages.push(children[0]);
+       pages.push(children[0]);
     } else if (children) {
       pages.push(children);
     } else {
