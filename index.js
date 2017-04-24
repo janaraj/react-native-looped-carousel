@@ -34,14 +34,8 @@ export default class Carousel extends Component {
     arrows: React.PropTypes.bool,
     arrowsContainerStyle: Text.propTypes.style,
     arrowstyle: Text.propTypes.style,
-    leftArrowText: React.propTypes.oneOfType([
-      React.PropTypes.string,
-      React.PropTypes.element,
-    ]),
-    rightArrowText: React.propTypes.oneOfType([
-      React.PropTypes.string,
-      React.PropTypes.element,
-    ]),
+    leftArrowText: React.propTypes.string,
+    rightArrowText: React.propTypes.string,
     chosenBulletStyle: Text.propTypes.style,
     onAnimateNextPage: React.PropTypes.func,
   };
