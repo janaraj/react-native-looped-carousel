@@ -218,16 +218,7 @@ export default class Carousel extends Component {
 
   _renderBullets = (pageLength) => {
     const bullets = [];
-    for (let i = 0; i < pageLength; i += 1) {
-      bullets.push(
-        <TouchableWithoutFeedback onPress={() => this._animateToPage(i)} key={`bullet${i}`}>
-          <View
-            style={i === this.state.currentPage ?
-              [styles.chosenBullet, this.props.chosenBulletStyle] :
-              [styles.bullet, this.props.bulletStyle]}
-          />
-        </TouchableWithoutFeedback>);
-    }
+   
     return (
       <View style={styles.bullets}>
         <View style={[styles.bulletsContainer, this.props.bulletsContainerStyle]}>
