@@ -269,11 +269,13 @@ export default class Carousel extends Component {
         </Text>
       );
     }
-    alert("Testing")
+    console.log("Testing" + pages)
+    console.log("Testing" + JSON.stringify(pages))
+
     pages = pages.map((page, i) => (
-      <TouchableWithoutFeedback style={[{ ...size }, this.props.pageStyle]} key={`page${i}`}>
+      <TouchableOpacity style={[{ ...size }, this.props.pageStyle]} key={`page${i}`}>
           {page}
-      </TouchableWithoutFeedback>
+      </TouchableOpacity>
     ));
 
     const containerProps = {
