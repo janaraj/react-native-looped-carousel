@@ -281,7 +281,9 @@ export default class Carousel extends Component {
 
     pages = pages.map((page, i) => (
       <TouchableOpacity style={[{ ...size }, this.props.pageStyle]} key={`page${i}`}>
-        {page}
+        <View>
+          {page}
+</View>
       </TouchableOpacity>
     ));
 
