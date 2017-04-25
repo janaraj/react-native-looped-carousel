@@ -258,6 +258,7 @@ export default class Carousel extends Component {
     const { size } = this.state;
     const children = this.props.children;
     let pages = [];
+console.log("Inside render" + children.length);
 
     if (children && children.length > 1) {
       // add all pages
