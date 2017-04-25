@@ -220,13 +220,13 @@ export default class Carousel extends Component {
     const bullets = [];
     for (let i = 0; i < pageLength; i += 1) {
       bullets.push(
-        <TouchableWithoutFeedback onPress={() => this._animateToPage(i)} key={`bullet${i}`}>
+        <TouchableOpacity onPress={() => this._animateToPage(i)} key={`bullet${i}`}>
           <View
             style={i === this.state.currentPage ?
               [styles.chosenBullet, this.props.chosenBulletStyle] :
               [styles.bullet, this.props.bulletStyle]}
           />
-        </TouchableWithoutFeedback>);
+        </TouchableOpacity>);
     }
     return (
       <View style={styles.bullets}>
@@ -280,9 +280,9 @@ export default class Carousel extends Component {
     }
 
     pages = pages.map((page, i) => (
-      <TouchableWithoutFeedback style={[{ ...size }, this.props.pageStyle]} key={`page${i}`}>
+      <TouchableOpacity style={[{ ...size }, this.props.pageStyle]} key={`page${i}`}>
         {page}
-      </TouchableWithoutFeedback>
+      </TouchableOpacity>
     ));
 
     const containerProps = {
